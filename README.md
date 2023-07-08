@@ -20,7 +20,7 @@ The application cannot be installed but accessed via the index.html URL
 
 To create a randomly generated password
 
-Application cannot be installed but accessed through the index.html
+Application cannot be installed but accessed through the index.html or the .io page https://seantaylor1006.github.io/Password-Generator/
 
 ![password generator screenshot](https://github.com/seantaylor1006/Password-Generator/assets/133485957/dec99094-314b-4673-bcca-bc53a3acf7dd)
 
