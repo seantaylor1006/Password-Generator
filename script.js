@@ -22,35 +22,24 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   let length = window.prompt("Enter character length (up to 128)");
+
+  let yesLower = confirm("add lowercase?");
+  let yesUpper = confirm("add uppercase?");
+  let yesNumber = confirm("add numbers?");
+  let yesSpecial = confirm("add special characters?");
+
+  let passcode = "";
+
   if (!length) {
     return;
   }
 // window prompt code from Rock,Paper,Scissors project
-    if (length >128) {
-      window.alert("unavailable");
-      return "error";
-    }
-
-  let yesLower = window.prompt("add lowercase?");
-    if (yesLower = "no") {
-      yesLower = false;
-    }
-  let yesUpper = window.prompt("add uppercase?");
-    if (yesUpper = "no") {
-      yesUpper = false;
-    }
-  let yesNumber = window.prompt("add numbers?");
-    if (yesNumber = "no") {
-      yesNumber = false;
-    }
-  let yesSpecial = window.prompt("add special characters?");
-    if (yesSpecial = "no")
-      yesSpecial = false;
- 
-
-  let passcode = "";
-
-  if (yesLower, yesUpper, yesNumber, yesSpecial) {
+  if (length > 128) {
+    window.alert("unavailable");
+  } else if (length < 8) {
+    window.alert("unavailable");
+    return "error";
+  } else if (yesLower, yesUpper, yesNumber, yesSpecial) {
     for (i = 0; i < length; i++) {
     passcode += passCombo.charAt(Math.floor(Math.random()*passCombo.length));
     }
