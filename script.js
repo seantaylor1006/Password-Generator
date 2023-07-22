@@ -1,4 +1,6 @@
 // Assignment code here
+var generateBtn = document.querySelector("#generate");
+
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var number = "0123456789";
@@ -18,7 +20,6 @@ var numberSpecial = number + special
 
 
 // Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   let length = window.prompt("Enter character length (up to 128)");
@@ -30,93 +31,82 @@ function generatePassword() {
 
   let passcode = "";
 
-  if (!length) {
-    return;
-  }
+if (!length) {
+  passcode += "error";
+}
 // window prompt code from Rock,Paper,Scissors project
-  if (length > 128) {
-    window.alert("unavailable");
-  } else if (length < 8) {
-    window.alert("unavailable");
-    return "error";
-  } else if (yesLower, yesUpper, yesNumber, yesSpecial) {
-    for (i = 0; i < length; i++) {
+if (length > 128) {
+  window.alert("unavailable");
+  passcode += "error";
+} else if (length < 8) {
+  window.alert("unavailable");
+  passcode += "error";
+}
+if (yesLower, yesUpper, yesNumber, yesSpecial) {
+  for (i = 0; i < length; i++) {
     passcode += passCombo.charAt(Math.floor(Math.random()*passCombo.length));
     }
-    return passcode
-  } else if (!yesLower, yesUpper, yesNumber, yesSpecial) {
+} else if (!yesLower, yesUpper, yesNumber, yesSpecial) {
     for (i = 0; i < length; i++) {
     passcode += comboNoLower.charAt(Math.floor(Math.random()*comboNoLower.length));
     }
-    return passcode
-  } else if (yesLower, !yesUpper, yesNumber, yesSpecial) {
+  console.log(noLowerFunction);
+} else if (yesLower, !yesUpper, yesNumber, yesSpecial) {
     for (i = 0; i < length; i++) {
     passcode += comboNoUpper.charAt(Math.floor(Math.random()*comboNoUpper.length));
     }
-    return passcode
-  } else if (!yesLower, yesUpper, !yesNumber, yesSpecial) {
+} else if (!yesLower, yesUpper, !yesNumber, yesSpecial) {
     for (i = 0; i < length; i++) {
     passcode += comboNoNumber.charAt(Math.floor(Math.random()*comboNoNumber.length));
     }
-    return passcode
-  } else if (yesLower, yesUpper, yesNumber, !yesSpecial) {
+} else if (yesLower, yesUpper, yesNumber, !yesSpecial) {
     for (i = 0; i < length; i++) {
     passcode += comboNoSpecial.charAt(Math.floor(Math.random()*comboNoSpecial.length));
     }
-    return passcode
-  } else if (yesLower, yesUpper, !yesNumber, !yesSpecial) {
+} else if (yesLower, yesUpper, !yesNumber, !yesSpecial) {
     for (i = 0; i < length; i++) {
     passcode += lowerUpper.charAt(Math.floor(Math.random()*lowerUpper.length));
     }
-    return passcode
-  } else if (yesLower, !yesUpper, yesNumber, !yesSpecial) {
+} else if (yesLower, !yesUpper, yesNumber, !yesSpecial) {
     for (i = 0; i < length; i++) {
     passcode += lowerNumber.charAt(Math.floor(Math.random()*lowerNumber.length));
     }
-    return passcode
-  } else if (yesLower, !yesUpper, !yesNumber, yesSpecial) {
+} else if (yesLower, !yesUpper, !yesNumber, yesSpecial) {
     for (i = 0; i < length; i++) {
     passcode += lowerSpecial.charAt(Math.floor(Math.random()*lowerSpecial.length));
     }
-    return passcode
-  } else if (!yesLower, yesUpper, yesNumber, !yesSpecial) {
+} else if (!yesLower, yesUpper, yesNumber, !yesSpecial) {
     for (i = 0; i < length; i++) {
     passcode += upperNumber.charAt(Math.floor(Math.random()*upperNumber.length));
     }
-    return passcode
-  } else if (!yesLower, yesUpper, !yesNumber, yesSpecial) {
+} else if (!yesLower, yesUpper, !yesNumber, yesSpecial) {
     for (i = 0; i < length; i++) {
     passcode += upperSpecial.charAt(Math.floor(Math.random()*upperSpecial.length));
     }
-    return passcode
-  } else if (!yesLower, !yesUpper, yesNumber, yesSpecial) {
+} else if (!yesLower, !yesUpper, yesNumber, yesSpecial) {
     for (i = 0; i < length; i++) {
     passcode += numberSpecial.charAt(Math.floor(Math.random()*numberSpecial.length));
     }
-    return passcode
-  } else if (yesLower, !yesUpper, !yesNumber, !yesSpecial) {
+} else if (yesLower, !yesUpper, !yesNumber, !yesSpecial) {
     for (i = 0; i < length; i++) {
     passcode += lowerCase.charAt(Math.floor(Math.random()*lowerCase.length));
-    }
-    return passcode
-  } else if (!yesLower, yesUpper, !yesNumber, !yesSpecial) {
+    } 
+} else if (!yesLower, yesUpper, !yesNumber, !yesSpecial) {
     for (i = 0; i < length; i++) {
     passcode += upperCase.charAt(Math.floor(Math.random()*upperCase.length));
-    }
-    return passcode
-  } else if (!yesLower, !yesUpper, yesNumber, !yesSpecial) {
+    } 
+} else if (!yesLower, !yesUpper, yesNumber, !yesSpecial) {
     for (i = 0; i < length; i++) {
     passcode += number.charAt(Math.floor(Math.random()*number.length));
     }
-    return passcode
-  } else if (!yesLower, !yesUpper, !yesNumber, yesSpecial) {
+} else if (!yesLower, !yesUpper, !yesNumber, yesSpecial) {
     for (i = 0; i < length; i++) {
     passcode += special.charAt(Math.floor(Math.random()*special.length));
     }
-    return passcode
-  } else if (!yesLower, !yesUpper, !yesNumber, !yesSpecial) {
-    return "error";
+} else if (!yesLower, !yesUpper, !yesNumber, !yesSpecial) {
+    passcode += "error";
   }
+return passcode;
 }
 //Chuyi and Stack Overflow helped me with this part  https://stackoverflow.com/questions/1497481/javascript-password-generator*/
 
@@ -125,10 +115,12 @@ function generatePassword() {
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+debugger;
   passwordText.value = password;
 
 }
 
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
