@@ -35,15 +35,13 @@ function generatePassword() {
 
 if (!length) {
   passcode += "error";
-}else if (length > 128) {
+} else if (length > 128) {
   window.alert("unavailable");
   passcode += "error";
 } else if (length < 8) {
   window.alert("unavailable");
   passcode += "error";
-} else if (length = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_-+=<>?/") {
-  window.alert("please type a number");
-  passcode += "error";
+
 //added a condition to make sure only numbers are typed for the length
 } else if (yesLower && yesUpper && yesNumber && yesSpecial) {
   for (i = 0; i < length; i++) {
@@ -105,7 +103,8 @@ if (!length) {
     for (i = 0; i < length; i++) {
     passcode += special.charAt(Math.floor(Math.random()*special.length));
     }
-} else if (!yesLower && !yesUpper && !yesNumber && !yesSpecial) {
+} else {
+    window.alert("unavailable");
     passcode += "error";
   }
 return passcode;
